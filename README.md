@@ -1,4 +1,8 @@
-# charizard
+# Charizard
+
+My name is Kirk and I've really been trying to learn how to code. I live in Lubbock, Texas and currently work in a different field. I have a family consisting of a wife and a precious german shepherd who loves to just play more than anything else in the world. I love running, being in nature and soliving puzzles. My goal is to be a self taught web developper and use what I learn to get a career in web developping.
+
+This is probably a pretty lame Repository but it'll end up being almost a journal for me and my learning as well as a bit of a grab bag of things that don't really have their own home elsewhere.
 
 # Git tips!
 
