@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <fieldset>
+      <form action="mailto:kiritchell@gmail.com" method=”POST"
+      enctype=”multipart/form-data”
+      name=”EmailForm”>
+        <h1 class="title">Webform</h1>
+        <p>
+          First Name:<input type="text" name="name" maxlength="20" required />
+        </p>
+        <p>Last Name:<input type="text" name="name" maxlength="20" /></p>
+        <p>Email:<input type="text" name="name" maxlength="20" required /></p>
+      </fieldset>
+      <fieldset>
+        <p>
+          Select your favorite radio number. <br />
+          <input type="radio" name="number" value="1" /> 1
+          <input type="radio" name="number" value="2" /> 2
+          <input type="radio" name="number" value="3" /> 3
+        </p>
+        <p>
+          Select your favorite checkbox.
+          <br />
+          <input type="checkbox" name="checkbox" value="a" />This one a
+          <input type="checkbox" name="checkbox" value="b" />This one b
+          <input type="checkbox" name="checkbox" value="c" />This one c
+        </p>
+        <br />
+        <p>
+          What country will win the olympics?
+          <select name="countries">
+            <option value="Finland">Finland</option>
+            <option value="USA">USA</option>
+            <option value="Japan">Japan</option>
+          </select>
+        </p>
+        <p>
+          What would you like to say on this form?
+          <textarea
+            name="comments"
+            rows="5"
+            columns="20"
+            placeholder="Type comments here!"
+          ></textarea>
+        </fieldset>
+      
+          <br />
+    
+          <input type="submit" name="google"></input>
+        </p>
+      </form>
+    </div>
+  </body>
+</html>
