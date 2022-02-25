@@ -21,3 +21,4 @@ Next let's just remember a few tips!
 6. $ git commit -m INSERT EXACT FILE NAME WITH CAPS AND EXTENSION
 7. $ git push
 8. Terminal should show some processes and finish, you can check your work with $ git status
+9. _Trouble Shooting_ Sometimes you will get an error message that you can't push to Github. Perhaps the error is because you need to update your tree by using Git pull which will update your local content to what is on your github.
