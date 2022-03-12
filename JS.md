@@ -1,6 +1,6 @@
 # JavaScript Notes
 
-# inline comments  use // and multiline use /* txt 8/
+# inline comments use // and multiline use /_ txt _/
 
 # Link to script at end of body of html document so it can load after rest of page is done.
 
