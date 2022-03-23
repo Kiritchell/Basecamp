@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal_con {
+ opacity:0;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  transition:opacity 0.3s ease;
+}
+.modal_con.show{pointer-events:auto;
+opacity:1;
+}
+
+.modal {
+  background-color: white;
+  width:600px;
+  height:400px;
+  max-width:100%;
+  text-align:center;
+}
