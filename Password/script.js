@@ -3,7 +3,7 @@ let password2 = document.getElementById('pass2')
 let password3 = document.getElementById('pass3')
 let password4 = document.getElementById('pass4')
 
-function Generate(){console.log("random password here after click");
+function Generate(){
 var randomstring = Math.random().toString(36).slice(-12);
 password1.textContent=randomstring
 var randomstring2 = Math.random().toString(36).slice(-12);
@@ -21,5 +21,5 @@ function copy(that){
     inp.select();
     document.execCommand('copy',false);
     inp.remove();
-    console.log("Copied Password!")
+    alert("Copied Password!")
     }
