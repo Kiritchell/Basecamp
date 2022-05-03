@@ -4,16 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="js.css" type="stylesheet">   
+    <link href="js.css" type="stylesheet" />
     <title>JavaScript</title>
   </head>
   <body>
+    <h1>Hello <span id="userName"></span>!</h1>
 
-    <p id="flexpara">Your Tithe, based on the amount of <input type="number" name="a" id="a"> is <var id="tithe"></var></p>
-    <button onclick="add(document.getElementById('a').value,document.getElementById('b').value)">Add</button>
-    
-
-    
+    <p id="flexpara">
+      Your Tithe, based on the amount of
+      <input type="text" placeholder="Monthly Income" id="myInput" /> is
+      <span id="myTitheAmount"></span>
+      <button type="button" onclick="getInputValue();">Get Value</button>
+      <!--hidden-->
+    </p>
   </body>
   <script src="index.js"></script>
 </html>
