@@ -1,4 +1,5 @@
-body{margin:0;
+body{
+    margin:0;
     padding:10px;
     font-family:'Karla', sans-serif;
     font-weight:500;}
@@ -12,11 +13,25 @@ input{
     font-size: 22px;
     }
 button{
-background: #5f9341;
-color:white;
-font-weight:800;
-width:150px;
-height:50px;
-font-size:20px;
-padding:10px 20px;
+    background: #5f9341;
+    color:white;
+    font-weight:800;
+    width:150px;
+    height:50px;
+    font-size:20px;
+    padding:10px 20px;
+}
+ul{
+    margin-top: 20px;
+    padding-left: 0;
+    list-style: none;
+}
+li{
+    margin-top:5px;
+    font-family:'Karla', sans-serif;
+    font-weight:300;
+    font-size:24px;
+}
+li a{
+    color:#5f9341;
 }
