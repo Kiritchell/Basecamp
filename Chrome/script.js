@@ -1,36 +1,49 @@
 let myLeads = []
-const inputEl = document.getElementById("input-el");
-const inputBtn = document.getElementById("input-btn");
-const ulEl = document.getElementById("ul-el");
+let oldLeads = []
+const inputEl = document.getElementById("input-el")
+const inputBtn = document.getElementById("input-btn")
+const ulEl = document.getElementById("ul-el")
+const deleteBtn = document.getElementById("delete-btn")
+const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads") )
 
-inputBtn.addEventListener("click", function(){
-    myLeads.push(inputEl.value)
-    renderLeads()
-})
-function renderLeads(){
-    let listItems = " "
-    for (let i=0; i<myLeads.length; i++){
-        listItems += `
-        <li>
-            <a target='_blank' href='${myLeads[i]}'>
-                ${myLeads[i]}
-            </a>
-        </li>
-    `
-        inputEl.value = ""
-    }
-    ulEl.innerHTML = listItems
+if (leadsFromLocalStorage){
+    myLeads=leadsFromLocalStorage 
+    render(myLeads)
 }
 
-const recipient = "James"
-const sender = "Kirk"
+function render(leads) {
+    let listItems = ""
+    for (let i = 0; i < leads.length; i++) {
+        listItems += `
+            <li>
+                <a target='_blank' href='${leads[i]}'>
+                    ${leads[i]}
+                </a>
+            </li>
+        `
+    }
+    ulEl.innerHTML = listItems  
+}
 
-const email = `
-Hey ${recipient}!
+deleteBtn.addEventListener("dblclick", 
+function(){localStorage.clear()
+           myLeads=[]
+           render(myLeads)
+           console.log("Local Storage Cleared")}
+)
 
-How is it going? 
+inputBtn.addEventListener("click", function() {
+    myLeads.push(inputEl.value)
+    inputEl.value = ""
+    localStorage.setItem("myLeads", JSON.stringify(myLeads) )
+    render(myLeads)
+})
 
-Cheers ${sender}
-`
 
-console.log(email)
+
+function add(x,y){
+   return x + y
+}
+
+ console.log( add(4, 6))
+
