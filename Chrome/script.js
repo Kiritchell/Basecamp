@@ -28,10 +28,14 @@ function render(leads) {
 }
 
 tabBtn.addEventListener('click', 
-function(){//console.log(tabs[0].url)
-myLeads.push(tabs[0].url)
-localStorage.setItem("myLeads", JSON.stringify(myLeads) )
-render(myLeads)
+function(){
+    chrome.tabs.query({active:true, currentWindow:true}, function(tabs){
+        myLeads.push(tabs[0].url)
+        localStorage.setItem("myLeads", JSON.stringify(myLeads) )
+        render(myLeads)
+
+    })
+    
 })
 
 
