@@ -4,7 +4,7 @@ body{background-color:rgb(206, 181, 149);}
     font-weight:700;
     font-family:'Quicksand';
     display:flex;
-    margin-top:25vh;
+    margin-top:15vh;
     margin-bottom: 5%;
     margin-left:auto;
     margin-right:auto;
@@ -17,6 +17,7 @@ body{background-color:rgb(206, 181, 149);}
     height:250px;
     width: 250px;
     transition:300ms;
+    color:white;
 }
 #buttonPop:hover{
     height:300px;
