@@ -1,4 +1,3 @@
-// Declaring the variables
 let lon;
 let lat;
 let temperature = document.querySelector(".temp");
@@ -20,10 +19,9 @@ if (navigator.geolocation) {
 	const api = "86fb277ccbb0ea478f6c1580ffd5d4da";
 
 	const base =
-`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&` +
+`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&` +
 `lon=${lon}&appid=6d055e39ee237af35ca066f35474e9df`;
 
-	// Calling the API
 	fetch(base)
 		.then((response) => {
 		return response.json();
