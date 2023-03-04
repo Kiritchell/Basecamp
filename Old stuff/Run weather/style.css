@@ -1,0 +1,18 @@
+body{text-align: center ;
+    font-family:"Quicksand";
+background-color: #e3e9f5 ;
+}
+a{color:#e3e9f5 !important;}
+
+#advice{font-weight: 600;
+    font-size:2rem;
+    margin-top: 10rem;
+    color:#23406f;
+}
+div{
+    color:#674d72 ;
+    font-size:1.5rem;
+}
+
+.note{font-size:1rem}
+

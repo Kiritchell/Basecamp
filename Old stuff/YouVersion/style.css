@@ -1,0 +1,25 @@
+body{margin:0;
+text-align: center;
+align-items: center;
+align-content: center;
+font-family:Oswald;
+}
+#header{text-align: center;
+    height:100px;
+    width:100vw;
+    background-color:white;
+    margin:0;
+    padding;
+}
+#logo{font-weight:500;
+font-size:30px;
+color:black}
+#header-link{font-weight:400;
+    font-size:24px;
+    color:black}
+    #search{border-radius:20px;
+    height:30px;
+    width:200px;
+padding:5px;
+padding-left:15px;
+font-size: 16px;}
