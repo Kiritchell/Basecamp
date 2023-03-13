@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'neoclassical';
+    src: url('/neoclassical.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  html {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  body {background-color:rgba(218, 218, 218,100);
+
+  }
+
+  .headings {
+    font-family: 'neoclassical', serif;
+    font-size:2em;
+  }
+
+  .paragraph-normal {font-family:'Montserrat', sans-serif;
+    font-size:1em;
+    }
+
+  .paragraph-sm{font-family:'Montserrat', sans-serif;
+    font-size:.8em;
+    font-weight: 300;}
+
+
+.main-title{position:absolute;
+right:10px;
+top:0;
+}
+
+#intro-div{margin-top:60px;
+}
+
+#last-update-div{margin-top:-30px;
+margin-bottom:30px;
+font-style: italic;}
+
+.welcome-title{margin-left:20px;
+margin-right:20px;
+}
+
+.welcome-paragraph{
+margin-left:20px;
+margin-right:20px;
+font-weight:400;}
+
+
+
+.special-font{font-family: 'Libre Barcode 39 Text', cursive;
+  font-size:2em;
+  display: block;
+  bottom:0px;
+  position:absolute;
+  left:10px;}
+
+
