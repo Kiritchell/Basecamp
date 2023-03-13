@@ -60,4 +60,50 @@ font-weight:400;}
   position:absolute;
   left:10px;}
 
+  #scrimba-btn{
+    border-radius: 30px;
+    border:1px solid gray;
+    color:#0f1419;
+    font-family:'Montserrat', sans-serif;
+    font-weight:600;
+    background-color: inherit;
+    font-size:1em;
+    padding:10px;
+    letter-spacing:1px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:20px;
+  }
 
+#google-input{width:500px;
+line-height:24px;
+padding: 10px 30px 10px 30px;
+border:1px solid #dfe1e5;
+border-radius:24px;
+display: block;
+margin-left: auto;
+margin-right:auto;
+font-family:monospace;
+font-size:1em;}
+
+#button-div{display:flex;
+    justify-content: center;
+
+}
+
+.google-btn{
+    margin-left:4px;
+    margin-right: 4px;;
+    width:fit-content;
+    height:fit-content;
+    font-size:1em;
+    border-radius:5px;
+    font-family:"Montserrat";
+    background-color: gray;
+    border:none;
+    color:black;
+    margin-top:20px;
+    font-weight:500;
+    padding:5px 10px 5px 10px;
+}
