@@ -21,6 +21,8 @@
   margin-top:5px;}
 
 #card{
+  margin-top:25%;
+  margin-bottom:50%;
   z-index:100;
   display:flex;
 margin-left:auto;
@@ -52,6 +54,6 @@ p, h4{font-family:'Montserrat', sans-serif}
 
 @keyframes bounce {
 0%   { transform: translateY(0); }
-50%  { transform: translateY(50px); }
+50%  { transform: translateY(-50px); }
 100% { transform: translateY(0); }
 }
