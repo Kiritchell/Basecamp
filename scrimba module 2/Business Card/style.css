@@ -17,8 +17,10 @@
   }
 
 
-.avatar{width:175px;
-  margin-top:5px;}
+.avatar{width:150px;
+  margin-top:10px;
+  margin-bottom:10px;
+border-radius:100%;}
 
 #card{
   margin-top:25%;
