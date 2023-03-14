@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'neoclassical';
+    src: url('/neoclassical.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+html {
+    
+    width: 100vw;
+    height: 100vh;
+  }
+
+body { margin: 0px;
+  padding: 0px;
+  font-family: 'Noto Sans JP';
+  background-image: url("https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80");
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
+
+  #hero{
+  padding:30px;}
+
+.center{display: flex;
+  justify-content: center;
+    }
+
+#nasa-logo{width:100px;
+margin-top:10px;}
+
+h1{margin-top:40px;
+text-shadow:3px 3px 3px rgba(255, 255, 255, .5);
+}
+
+h4{margin-top:50px;
+font-size:1em;}
+
+.button{
+  text-shadow:3px 3px 3px rgba(0, 0, 0, 0.2);
+  margin-left:5px;
+  margin-right:5px;
+  font-family:inherit;
+  padding:10px 15px;
+  border:none;
+  background-color: white;
+  color:black;
+  font-size: 1em;
+}
+
+.spcl{
+text-decoration: underline;
+text-decoration-color:white;
+text-decoration-thickness: 3px;
+text-underline-offset:5px;
+}
