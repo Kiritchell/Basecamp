@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'neoclassical';
+    src: url('/neoclassical.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  html {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  body {background-color:rgba(218, 218, 218,100);
+
+  }
+
+
+.avatar{width:175px;
+  margin-top:5px;}
+
+#card{
+  z-index:100;
+  display:flex;
+margin-left:auto;
+margin-right:auto;
+width:500px;
+border-bottom:5px solid #52796f;
+background-color:#cad2c5;
+color:#2f3e46;
+text-align:center;
+justify-content: space-around;
+border-radius:20px;
+box-shadow:3px 3px rgba(42, 62, 70, .35);
+animation-duration: 1s;
+animation-iteration-count: 1;
+transform-origin: top;
+}
+
+h1{
+  font-family:'neoclassical', serif;
+text-shadow:3px 3px rgba(42, 62, 70, .15)}
+
+p, h4{font-family:'Montserrat', sans-serif}
+
+.bounce:hover {
+  animation-name: bounce;
+  animation-timing-function: ease;
+}
+
+
+@keyframes bounce {
+0%   { transform: translateY(0); }
+50%  { transform: translateY(50px); }
+100% { transform: translateY(0); }
+}
