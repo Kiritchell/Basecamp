@@ -5,53 +5,70 @@
     font-style: normal;
   }
   
-  html {
-    margin: 0;
-    padding: 0;
+html {
     width: 100vw;
     height: 100vh;
   }
 
-  body {background-color:rgba(218, 218, 218,100);
+body {
+  margin: 0;
+  padding: 0;
+  background-color:rgba(218, 218, 218,100);
 
   }
 
-  .headings {
+.heading {
     font-family: 'neoclassical', serif;
     font-size:2em;
   }
 
-  .paragraph-normal {font-family:'Montserrat', sans-serif;
+.heading-sm {
+  font-family: 'neoclassical', serif;
+  font-size:1em;
+  }
+
+.paragraph-lg {font-family:'Montserrat', sans-serif;
+  font-size:1.5em;
+  font-weight:600
+  }
+
+.paragraph-md {font-family:'Montserrat', sans-serif;
     font-size:1em;
+    font-weight:400;
     }
 
-  .paragraph-sm{font-family:'Montserrat', sans-serif;
+.paragraph-sm{font-family:'Montserrat', sans-serif;
     font-size:.8em;
     font-weight: 300;}
 
-
-.main-title{position:absolute;
-right:10px;
-top:0;
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: black;
 }
 
-#intro-div{margin-top:60px;
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: orange;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
 }
 
-#last-update-div{margin-top:-30px;
-margin-bottom:30px;
-font-style: italic;}
-
-.welcome-title{margin-left:20px;
-margin-right:20px;
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
-.welcome-paragraph{
-margin-left:20px;
-margin-right:20px;
-font-weight:400;}
+.flex{display:flex}
 
-
+.flex-center{display:flex;
+justify-content: center;}
 
 .special-font{font-family: 'Libre Barcode 39 Text', cursive;
   font-size:2em;
