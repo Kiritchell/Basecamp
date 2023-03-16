@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'neoclassical';
+    src: url('/neoclassical.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+html {
+    width: 100vw;
+    height: 100vh;
+  }
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color:rgba(218, 218, 218,100);
+
+  }
+
+  #hero-container{width:100%;
+    height:300px;
+    display:flex;
+  justify-content: center;
+text-align: center;
+
+}
+  #hero-img{width:100%; 
+    display:flex;
+background-image: url('ultra\ hero.jpg');
+background-size:cover;
+background-repeat: no-repeat;
+align-items: center;
+justify-content: center;
+
+  }
+
+.hero-title{text-shadow:1px 1px 25px #708795;
+    font-family: 'neoclassical', cursive;
+    color:white;
+    font-size:4em;
+    letter-spacing: 5px;text-align: center;
+justify-content: center;
+align-items: center;
+    
+}
+.hero-para-div{width:fit-content;
+display:flex;
+margin-left:auto;
+margin-right:auto;
+margin-top:-40px;
+}
+.hero-para{
+  font-family:'Lato', sans-serif;
+  font-size:1.2em;
+  font-weight:400;
+  color:white;
+  background-color: #203F48;
+  border-radius:10px;
+  padding:5px 10px;
+  display: flex;
+  margin-left:10px;
+  margin-right:10px;
+}
+
+
+.heading {
+    font-family: 'neoclassical', serif;
+    font-size:1.8em;
+    color:#061F21;
+  text-shadow:2px 2px 15px whitesmoke;
+
+  letter-spacing: 3px;
+  margin-left:10px;
+  margin-right:10px;
+  text-align: center;
+  }
+
+.heading-sm {
+  font-family: 'neoclassical', serif;
+  font-size:1em;
+  }
+
+.paragraph-lg {font-family:'Lato', sans-serif;
+  font-size:1.5em;
+  font-weight:700;
+  
+  }
+
+.paragraph-md {font-family:'Lato', sans-serif;
+    font-size:1em;
+    font-weight:400;
+    }
+
+.paragraph-sm{font-family:'Lato', sans-serif;
+    font-size:.8em;
+    font-weight: 300;}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: black;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFD5A4;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;}
+
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.flex{display:flex}
+
+.flex-center{display:flex;
+justify-content: center;}
+
+.special-font{font-family: 'Libre Barcode 39 Text', cursive;
+  font-size:2em;
+  display: block;
+  bottom:0px;
+  position:absolute;
+  left:10px;}
+
+
