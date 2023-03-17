@@ -1,3 +1,5 @@
+*{transition-duration: 250ms;}
+
 @font-face {
     font-family: 'neoclassical';
     src: url('/neoclassical.woff') format('woff');
@@ -20,7 +22,7 @@
   .main-title{position:absolute;
     right:20px;
     top:-10px;
-    font-size:2.5em;
+    font-size:1.5em;
     font-family: 'neoclassical', serif;
     text-shadow:2.5px 2.5px 1px #D77A61;
     }
@@ -54,4 +56,27 @@
   left:10px;
 color:#D77A61;}
 
-#top-spacer{margin-top:70px;}
+#top-spacer{margin-top:30px;}
+
+#power-el{
+  margin-top:-9px;
+}
+.button{color:#F4E4BA;
+  background-color:#4A7C59;
+  text-shadow:2px 2px 1px #D77A61;
+  font-family: 'neoclassical', serif;
+  font-size:2em;
+  padding:5px 10px;
+  border:none;
+  margin-left:15px;
+  margin-right:15px;
+border-radius:15px;
+letter-spacing: .5px;
+border-bottom:4px solid #D77A61;
+}
+
+.button:hover{background-color:#D77A61;
+color:#565676;
+text-shadow:2px 2px 1px #BBBDF6;
+border-bottom:4px solid #4A7C59;
+font-size:2.2em;}
