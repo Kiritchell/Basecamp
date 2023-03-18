@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="icon" href="" />
+    <link
+      rel="icon"
+      type="image"
+      href="https://munchkin.game/site-munchkin/assets/files/1086/m_head_icon_white.jpg" />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet" />
@@ -13,26 +16,32 @@
     <link href="/neoclassical.woff" rel="fonts" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style rel="stylesheet" link="stylee.css"></style>
-    <title>Estettik.</title>
+    <title>Munchkin Power Counter</title>
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-    <h1 class="main-title">Estetikk co.</h1>
+    <h1 class="main-title">
+      <a href="https://kiritchell.netlify.app">Estetikk co.</a>
+    </h1>
 
     <div id="top-spacer"></div>
     <div class="flex-center">
-      <h1 class="h1">Munchkin Power Level</h1>
+      <h1 id="page-title" class="h1">Munchkin Power Level</h1>
     </div>
     <div class="flex-center">
-      <h1 class="h1" id="power-el">0</h1>
+      <h1 class="h1" id="power-el">.</h1>
     </div>
     <div class="flex-center">
-      <button class="button" id="increment-btn" onclick="increment()">
-        Increment
+      <button class="button" id="increment-btn" onclick="increase()">
+        Increase
       </button>
-      <button class="button" id="decrement-btn" onclick="decrement()">
-        Decrement
+      <button class="button" id="decrement-btn" onclick="decrease()">
+        Decrease
       </button>
+      <button class="button" id="save-btn" onclick="save()">Save</button>
+    </div>
+    <div class="flex-center">
+      <p class="flex-center p-normal" id="save-el">Past Power: <br /></p>
     </div>
   </body>
   <script src="script.js"></script>
