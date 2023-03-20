@@ -24,25 +24,32 @@
       <a href="https://kiritchell.netlify.app">Estetikk co.</a>
     </h1>
 
-    <div id="top-spacer"></div>
     <div class="flex-center">
-      <h1 id="page-title" class="h1">Munchkin Power Level</h1>
+      <h1 class="h1">Munchkin Power Level</h1>
     </div>
     <div class="flex-center">
-      <h1 class="h1" id="power-el">.</h1>
+      <h1 class="h1" id="power-el"></h1>
     </div>
     <div class="flex-center">
-      <button class="button" id="increment-btn" onclick="increase()">
+      <button class="button" id="increase-btn" onclick="increase()">
         Increase
       </button>
-      <button class="button" id="decrement-btn" onclick="decrease()">
+      <button class="button" id="decrease-btn" onclick="decrease()">
         Decrease
       </button>
-      <button class="button" id="save-btn" onclick="save()">Save</button>
+      <button
+        class="button"
+        id="save-btn"
+        onclick="save()">
+        Save
+      </button>
     </div>
     <div class="flex-center">
-      <p class="flex-center p-normal" id="save-el">Past Power: <br /></p>
+      <h1 class="h1">Past Power Level: <br /></h1>
+      <p class="p-normal" id="past-power"></p>
     </div>
+
+    <div id="top-spacer"></div>
   </body>
   <script src="script.js"></script>
 </html>

@@ -1,28 +1,28 @@
+let powerWritten = document.getElementById('power-el')
+let pastPower = document.getElementById('past-power')
 let power = 0
-let writtenPower = document.getElementById('power-el')
-let saveEl = document.getElementById('save-el')
+let roundNumberClicks = document.getElementById('save-btn')
+let count = 0
+let result = 0
 
 function increase(){
-    power += 1
-    writtenPower.innerHTML = power
+  power += 1
+  powerWritten.innerHTML = power
 }
 
 function decrease(){
-    power -= 1
-    writtenPower.innerHTML = power
+  power -= 1
+  powerWritten.innerHTML = power
 }
+
 
 
 function save(){
-    let pastPower = power + " - "
-    saveEl.innerHTML += pastPower
-    console.log(power)
+  roundNumberClicks.onclick = function(){
+    count += 1;
+    console.log(count)
+    pastPower.innerHTML += 'Round ' + count + '  =  ' + power + '<br>'
+
+  }
 
 }
-
-
-
-
-// practice
-power = 0
-writtenPower.innerHTML = power

@@ -1,0 +1,136 @@
+/* Munchkin CSS Started March 2023 Kirk Mitchell */
+.colors{
+color:#2F3E46;
+color:#354F52;
+color:#52796F;
+color:#84A98C;
+color:#CAD2C5;}
+*{
+  transition-duration: 250ms;}
+
+@font-face {
+  font-family: 'neoclassical';
+  src: url('/neoclassical.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  }
+
+html {
+  width: 100vw;
+  height: 100vh;
+  }
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color:#2F3E46;
+
+  font-family: 'Viga', sans-serif;
+  }
+
+
+.main-title{
+  color:#CAD2C5;
+  transform:rotate(90deg);
+  opacity:.5;
+  position:absolute;
+  right:-45px;
+  bottom:55px;
+  font-size:1.5em;
+  font-family: 'neoclassical', serif;
+  text-shadow:2.5px 2.5px 1px #84A98C;;
+  }
+
+a{
+  text-decoration: none;
+  color:inherit;}
+
+.flex-center{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+
+}
+
+
+.h1 {
+  color:#CAD2C5;
+  text-shadow:2px 2px 1px #52796F;
+  margin-right:30px;
+  font-size:2em;
+  margin-left:30px;
+}
+
+
+.p-normal {
+  color:#CAD2C5;
+  text-shadow:2.5px 2.5px 1px #52796F;
+  font-size:1.5em;
+  margin-left:100px;
+  margin-right:100px;
+}
+
+.p-sm{
+  font-size:.8em;
+  font-weight: 300;}
+
+/* Spacers */
+#top-spacer{
+  margin-top:30px;}
+
+
+/* Buttons */
+.buttons{display:flex;
+ margin:auto;
+width:500px;}
+
+.button{
+  font-family:inherit;
+  justify-content: center;
+  width:250px;
+  color:#2F3E46;
+  background-color:#CAD2C5;
+  text-shadow:2px 2px 1px #52796F;
+  font-size:2em;
+  padding:5px 10px;
+  border:none;
+  margin-left:15px;
+  margin-right:15px;
+  border-radius:15px;
+  letter-spacing: .5px;
+  border-bottom:4px solid #52796F;
+  border-right:4px solid #52796F;
+  margin-bottom:20px;
+  display: flex;
+
+}
+
+.button:hover{
+  background-color:#354F52;
+  color:#CAD2C5;
+  text-shadow:2px 2px 1px #CAD2C5;;
+  border-bottom:4px solid #CAD2C5;
+  border-right:4px solid #CAD2C5;
+  font-size:2.1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Query */
+@media (max-width: 768px){
+
+
+
+}
