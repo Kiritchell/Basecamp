@@ -1,7 +1,6 @@
 let firstCard = 2
 let secondCard = 9
-let thirdCard = 5
-let cards = [firstCard, secondCard, thirdCard]
+let cards = [firstCard, secondCard]
 let sum = firstCard + secondCard
 let hasBlackjack = false
 let isAlive = true
@@ -28,9 +27,10 @@ function renderGame(){
 }
 
 function newCard(){
-    message = "Dealing New Card"
-    thirdCard = 5
+    let thirdCard = 5
     sum += thirdCard
+    cards.push(thirdCard)
+    console.log(cards)
     renderGame()
 }
 
@@ -42,8 +42,8 @@ console.log(isAlive)
 console.log(messageToPlayer.innerHTML)
 
 
+//Practice
 
-
-let mySkills = ["bowstaff hunting", "nunchuck skills", "drawing"]
-
-console.log(mySkills[1])
+for (let count = 1; count < 15; count += -2){
+    console.log(count)
+}
