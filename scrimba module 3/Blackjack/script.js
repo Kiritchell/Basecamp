@@ -1,9 +1,8 @@
-let firstCard = getRandomCard()
-let secondCard = getRandomCard()
-let cards = [firstCard, secondCard]
-let sum = firstCard + secondCard
+
+let cards = []
+let sum = 0
 let hasBlackjack = false
-let isAlive = true
+let isAlive = false
 let message = " "
 
 //Getting Elements
@@ -12,6 +11,11 @@ let sumToPlayer = document.querySelector('#sumEl')
 let cardsToPlayer = document.getElementById('cardsEl')
 
 function startGame(){
+    isAlive=true
+    let firstCard = getRandomCard()
+    let secondCard = getRandomCard()
+    cards = [firstCard, secondCard]
+    sum = firstCard + secondCard
     renderGame()
 }
 
@@ -23,20 +27,23 @@ function renderGame(){
     sumToPlayer.innerHTML = sum
 
     if (sum <= 20){message = "Want to Draw Again? 🃏"}
-    else if (sum === 21){message = "Bingo! 🎉"
+    else if (sum === 21){message = "BlackJack! 🎉"
         hasBlackjack = true}
     else {message = "Bust Loser 😭"
-        isAlive = false
-        newButton.innerHTML = "Start over?"}
+        isAlive = false}
         messageToPlayer.innerHTML = message
 }
 
+
+
 function newCard(){
-    let card = getRandomCard()
-    sum += card
-    cards.push(card)
-    renderGame()
+    if (isAlive && hasBlackjack ===false){
+        let card = getRandomCard()
+        sum += card
+        cards.push(card)
+        renderGame()}
 }
+
 
 function getRandomCard() {
     let random = Math.floor( Math.random()*13 ) + 1
@@ -48,12 +55,3 @@ function getRandomCard() {
         return random
     }
 }
-//console.logs
-console.log(cards)
-console.log(sum)
-console.log(hasBlackjack)
-console.log(isAlive)
-
-
-//Practice
-
