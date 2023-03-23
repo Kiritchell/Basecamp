@@ -1,17 +1,24 @@
+let player = {
+    name:"Mysterious Player",
+    chips:150,
+    isAlive:false,
+}
 
 let cards = []
 let sum = 0
 let hasBlackjack = false
-let isAlive = false
 let message = " "
 
 //Getting Elements
+
 let messageToPlayer = document.querySelector('#messageToPlayer')
 let sumToPlayer = document.querySelector('#sumEl')
 let cardsToPlayer = document.getElementById('cardsEl')
+let playerEl = document.querySelector('#playerEl')
+
 
 function startGame(){
-    isAlive=true
+
     let firstCard = getRandomCard()
     let secondCard = getRandomCard()
     cards = [firstCard, secondCard]
@@ -20,6 +27,7 @@ function startGame(){
 }
 
 function renderGame(){
+    player.isAlive=true
     cardsToPlayer.textContent = "Cards: "
     for (let i=0; i<cards.length; i++){
         cardsToPlayer.textContent += cards[i] + " "
@@ -28,16 +36,25 @@ function renderGame(){
 
     if (sum <= 20){message = "Want to Draw Again? 🃏"}
     else if (sum === 21){message = "BlackJack! 🎉"
-        hasBlackjack = true}
+        hasBlackjack = true
+        player.chips += 50}
     else {message = "Bust Loser 😭"
-        isAlive = false}
+        player.isAlive = false
+        player.chips += -50}
         messageToPlayer.innerHTML = message
+        playerEl.innerHTML = player.name + (' has ') + player.chips +  (' Chips ')
+
 }
 
-
+function hold(){
+    if (player.isAlive && sum > 12){
+    player.chips += 25
+    cards = []
+    renderGame()}
+}
 
 function newCard(){
-    if (isAlive && hasBlackjack ===false){
+    if (player.isAlive && hasBlackjack ===false){
         let card = getRandomCard()
         sum += card
         cards.push(card)
@@ -55,3 +72,5 @@ function getRandomCard() {
         return random
     }
 }
+
+console.log (player.chips +player.isAlive)
