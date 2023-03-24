@@ -28,16 +28,17 @@ function startGame(){
 
 function renderGame(){
     player.isAlive=true
-    cardsToPlayer.textContent = "Cards: "
+    cardsToPlayer.innerHTML = "Cards: "
     for (let i=0; i<cards.length; i++){
-        cardsToPlayer.textContent += cards[i] + " "
+
+     cardsToPlayer.textContent += cards[i] + " "
     }
     sumToPlayer.innerHTML = sum
 
     if (sum <= 20){message = "Want to Draw Again? 🃏"}
     else if (sum === 21){message = "BlackJack! 🎉"
         hasBlackjack = true
-        player.chips += 50}
+        player.chips += 150}
     else {message = "Bust Loser 😭"
         player.isAlive = false
         player.chips += -50}
@@ -61,7 +62,6 @@ function newCard(){
         renderGame()}
 }
 
-
 function getRandomCard() {
     let random = Math.floor( Math.random()*13 ) + 1
     if (random > 10) {
@@ -70,7 +70,7 @@ function getRandomCard() {
         return 11
     } else {
         return random
+
     }
 }
 
-console.log (player.chips +player.isAlive)
