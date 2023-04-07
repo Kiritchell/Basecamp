@@ -5,8 +5,8 @@ const posts = [
         location: "Zundert, Netherlands",
         avatar: "images/avatar-vangogh.jpg",
         post: "images/post-vangogh.jpg",
-        comment: "just took a few mushrooms lol",
-        likes: 21
+        comment: "looked cute, might delete later",
+        likes: 205
     },
     {
         name: "Gustave Courbet",
@@ -15,7 +15,7 @@ const posts = [
         avatar: "images/avatar-courbet.jpg",
         post: "images/post-courbet.jpg",
         comment: "i'm feelin a bit stressed tbh",
-        likes: 4
+        likes: 40
     },
         {
         name: "Joseph Ducreux",
@@ -24,7 +24,31 @@ const posts = [
         avatar: "images/avatar-ducreux.jpg",
         post: "images/post-ducreux.jpg",
         comment: "gm friends! which coin are YOU stacking up today?? post below and WAGMI!",
-        likes: 152
+        likes: 800
     }
 ]
+
+let profile = 0
+
+let imageListener = document.querySelector('#image')
+
+imageListener.addEventListener('dblclick', function profileCycle(){
+    profile += 1
+    let instname = document.querySelector('#name')
+instname.innerHTML = posts[profile].name
+
+let instlocation = document.querySelector('#location')
+instlocation.innerHTML = posts[profile].location
+
+let instusername = document.querySelector('#username')
+instusername.innerHTML = posts[profile].username
+
+let instlikes = document.querySelector('#likes')
+instlikes.innerHTML = posts[profile].likes + '  Meaningless Nods'
+
+let instcomment = document.querySelector('#comment')
+instcomment.innerHTML = ' ' + posts[profile].comment
+
+
+})
 
