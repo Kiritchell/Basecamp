@@ -30,4 +30,6 @@ loginForm.addEventListener('submit', function(e){
             buttonDiv.style.display='none'
         },2000)
 
+const loginFormData = new FormData(loginForm)
+console.log(loginFormData)
 })
