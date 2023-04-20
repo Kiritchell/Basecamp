@@ -212,7 +212,15 @@ padding:20px;
 text-align: center;
 }
 
-
+.practice{
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    width:400px;
+    background-color:lightblue;
+    height:500px;
+    text-align:center;
+}
 
 
 @media (max-width: 768px){

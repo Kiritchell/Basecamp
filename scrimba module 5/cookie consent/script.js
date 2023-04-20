@@ -11,7 +11,7 @@ close.addEventListener('click', function(){
     modal.style.display = 'none'
 })
 
-setTimeout(function(){modal.style.display='block'},500)
+setTimeout(function(){modal.style.display='none'},500)/*here change none to block*/
 
 
 
@@ -37,6 +37,10 @@ console.log(loginName +' ' + loginEmail)
             info2.style.display='none'
             buttonDiv.style.display='none'
         },2000)
+setTimeout(function(){
+    close.disabled=false
+},2001)
+
 
 
 })
