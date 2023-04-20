@@ -169,10 +169,15 @@ right:10px;
     display:flex;
     justify-content: space-around;
 }
+.reverse{
+    flex-direction: row-reverse;
+}
 
 #sub-btn{
+
     background-color:salmon;
     padding:10px;
+
 }
 /* Buttons */
 

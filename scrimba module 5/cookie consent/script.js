@@ -1,3 +1,4 @@
+/* cookie consent */
 const close = document.querySelector('#close')
 const modal = document.querySelector('#modal')
 const modalText = document.querySelector('.modal-text')
@@ -5,15 +6,13 @@ const nameInput = document.querySelector('#name-input')
 const info = document.querySelector('.info')
 const info2=document.querySelector('.info2')
 const buttonDiv = document.querySelector('.button-div-2')
-
+const declineBtn = document.querySelector('.decline-btn')
 
 close.addEventListener('click', function(){
     modal.style.display = 'none'
 })
 
-setTimeout(function(){modal.style.display='none'},500)/*here change none to block*/
-
-
+setTimeout(function(){modal.style.display='block'},500)/*here change none to block*/
 
 const loginForm = document.querySelector('#login-form')
 
@@ -41,6 +40,10 @@ setTimeout(function(){
     close.disabled=false
 },2001)
 
-
-
 })
+
+declineBtn.addEventListener('mouseover', function(){
+    buttonDiv.classList.toggle('reverse')
+    console.log('hover')
+})
+/* cookie consent end */
