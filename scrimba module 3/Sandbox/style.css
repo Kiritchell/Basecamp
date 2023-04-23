@@ -110,11 +110,29 @@ width:200px;
 background-color:red;
 border-radius:50%;}
 
+form {display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin:10px;
+}
+label{font-family: 'montserrat';
+    padding:10px;
 
+}
 
+.inputs{
+    margin:10px;
+    padding:5px;
+
+}
+
+#submit{
+    width:200px;
+    padding:10px;
+}
 #modal{
 background-color: black;
-height:400px;
+height:fit-content;
 width:500px;
 padding: 20px;
 color:white;
@@ -122,7 +140,6 @@ border-radius: 20px;
 position:absolute;
 top:0px;
 left:0px;
-
 right:0px;
 bottom:0px;
 margin:auto;
