@@ -15,6 +15,22 @@ width: 100vw;
 height: 100vh;
 }
 
+
+.pumpkin-head{
+position:relative;
+margin:0px;
+height:100px;
+width:100%;
+background-color:rgba(115, 28, 29, 0.681);
+}
+
+img{rotate: 90deg;
+height:120px;
+width:auto;
+bottom:-30px;
+left:20px;
+position: absolute;
+}
 body {
 margin: 0;
 padding: 0;
@@ -27,7 +43,6 @@ text-shadow:1px 1px 0px #b5838d;
 nav{
 display:flex;
 justify-content: space-around;
-margin-bottom:20px;
 background-color: #1a1a1a;
 height:50px;
 width:100%;
@@ -68,12 +83,12 @@ text-align: center;}
 
 
 h1 {
-margin:0;
+margin:0px;
 font-size:2.5em;
 }
 
 h2{
-padding:10px;
+margin:0px;
 text-align:center;
 }
 
@@ -94,6 +109,8 @@ border-radius: 20px;
 text-decoration: none;
 font-weight:600;
 }
+
+
 
 .light{
 background-color:#ff6e6c
@@ -148,10 +165,10 @@ justify-content: center;
 }
 
 button{
-    border-radius:20px;
-    font-weight:700;
-    font-size:25px;
-    font-family:'Montserrat';
+border-radius:20px;
+font-weight:700;
+font-size:25px;
+font-family:'Montserrat';
 }
 
 
@@ -165,30 +182,84 @@ right:10px;
 }
 
 .button-div-2{
-    margin-top:50px;
-    display:flex;
-    justify-content: space-around;
+margin-top:50px;
+display:flex;
+justify-content: space-around;
 }
 .reverse{
-    flex-direction: row-reverse;
+flex-direction: row-reverse;
 }
 
 #sub-btn{
 
-    background-color:salmon;
-    padding:10px;
+background-color:salmon;
+padding:10px;
 
 }
-/* Buttons */
+/* Emotions */
 
+.emotion-grid{
+border:1px solid #1a1a1a;
+border-radius: 20px;
+margin:30px;
 
+height:fit-content;
+width:300px;
+justify-content: space-between;
+flex-direction: column;
+display: flex;
 
+}
+.emotion-container{
+    padding:5px 10px;
+    display: flex;
+    justify-content: space-between;
+border-bottom:1px solid #1a1a1a;
+flex-direction: row;
+}
+
+.emotion-container:hover{
+    background-color: salmon;
+}
+
+.top-emotion-container{
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.bottom-emotion-container{
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.last{border-bottom:none;
+}
+
+.emotions{
+color:black;
+padding:0px 20px;
+text-shadow: none;
+font-weight:600;
+padding:10px 0px;
+margin:0px;
+display: inline-flex;
+}
+
+.emotions-input{
+accent-color:salmon;
+display: inline-flex;
+align-items: center;
+padding:0px 20px;
+height:auto;
+width:25px;
+border-radius: 50%;
+}
 
 /* Form */
 
 .input-div{
-    margin:5px auto;
-    width:400px;
+margin:5px auto;
+width:400px;
 }
 
 label{
@@ -218,13 +289,13 @@ text-align: center;
 }
 
 .practice{
-    display: block;
-    margin-left:auto;
-    margin-right:auto;
-    width:400px;
-    background-color:lightblue;
-    height:500px;
-    text-align:center;
+display: block;
+margin-left:auto;
+margin-right:auto;
+width:400px;
+background-color:lightblue;
+height:500px;
+text-align:center;
 }
 
 
