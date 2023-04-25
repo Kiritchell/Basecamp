@@ -22,6 +22,7 @@ margin:0px;
 height:100px;
 width:100%;
 background-color:rgba(115, 28, 29, 0.681);
+z-index: -10;
 }
 
 img{rotate: 90deg;
@@ -85,6 +86,7 @@ text-align: center;}
 h1 {
 margin:0px;
 font-size:2.5em;
+z-index: 1;
 }
 
 h2{
@@ -124,6 +126,16 @@ font-size:1.8em;
 font-size:1em;
 font-weight: 300;}
 
+#meme-submit{
+    background-color:salmon;
+    font-weight:700;
+    font-size:20px;
+}
+
+#meme-submit:hover{
+    background-color: #1a1a1a;
+    color:salmon;
+}
 
 /* modal */
 
@@ -202,7 +214,6 @@ padding:10px;
 border:1px solid #1a1a1a;
 border-radius: 20px;
 margin:30px;
-
 height:fit-content;
 width:300px;
 justify-content: space-between;
