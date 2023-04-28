@@ -1,4 +1,4 @@
-/* cookie consent */
+
 const close = document.querySelector('#close')
 const modal = document.querySelector('#modal')
 const modalText = document.querySelector('.modal-text')
