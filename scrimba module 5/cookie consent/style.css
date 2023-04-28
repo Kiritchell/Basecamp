@@ -222,11 +222,12 @@ display: flex;
 
 }
 .emotion-container{
-    padding:5px 10px;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: space-around;
 border-bottom:1px solid #1a1a1a;
-flex-direction: row;
+color:black;
+flex-direction: column;
 }
 
 .emotion-container:hover{
@@ -254,6 +255,7 @@ font-weight:600;
 padding:10px 0px;
 margin:0px;
 display: inline-flex;
+
 }
 
 .emotions-input{
@@ -272,12 +274,12 @@ border-radius: 50%;
 margin:5px auto;
 width:400px;
 }
-
+/*
 label{
 margin:0;
 padding:10px;
 font-weight:600;
-color:whitesmoke;
+color:black;
 }
 
 input{border-radius:20px;
@@ -287,7 +289,7 @@ color:black;
 text-align: center;
 border:0;
 padding:10px;
-margin:5px;}
+margin:5px;} */
 
 #submit-input{
 width:auto;
