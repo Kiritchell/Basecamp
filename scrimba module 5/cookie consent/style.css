@@ -229,11 +229,20 @@ border-bottom:1px solid #1a1a1a;
 color:black;
 flex-direction: column;
 }
-
+/*
 .emotion-container:hover{
     background-color: salmon;
-}
+} */
 
+
+
+.btn{
+    font-family:'Montserrat';
+    font-size:20px;
+    padding:10px;
+    border-radius:20px;
+    margin-bottom:50px;
+}
 .top-emotion-container{
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
