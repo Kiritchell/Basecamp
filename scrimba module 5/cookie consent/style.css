@@ -225,10 +225,11 @@ display: flex;
     display: flex;
     align-items: center;
     justify-content: space-around;
-border-bottom:1px solid #1a1a1a;
 color:black;
 flex-direction: column;
+margin:20px 10px;
 }
+
 /*
 .emotion-container:hover{
     background-color: salmon;
@@ -266,9 +267,14 @@ margin:0px;
 display: inline-flex;
 
 }
-
+.radio{
+width:100%;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+margin:2px 5px;
+}
 .emotions-input{
-accent-color:salmon;
 display: inline-flex;
 align-items: center;
 padding:0px 20px;
@@ -277,6 +283,13 @@ width:25px;
 border-radius: 50%;
 }
 
+.highlight{
+    accent-color:salmon;
+    background-color: salmon;
+    font-weight:700;
+    border-radius:20px;
+    padding:5px;
+}
 /* Form */
 
 .input-div{

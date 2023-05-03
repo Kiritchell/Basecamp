@@ -46,10 +46,21 @@ function renderEmotionsRadios(cats) {
 
 renderEmotionsRadios(catsData)
 
-emoCont.addEventListener('click', function(e){
-    let activeEmotion = e.target.id
-    console.log(activeEmotion)
-})
+emoCont.addEventListener('change', highlightCheckedOption)
+
+
+
+
+
+function highlightCheckedOption(e){
+let activeEmotion = document.getElementById(e.target.id)
+let prevEmotion = document.querySelector(".highlight");
+console.log(activeEmotion)
+if(prevEmotion){
+    prevEmotion.classList.remove('highlight')
+}
+activeEmotion.parentElement.classList.add('highlight');
+}
 
 
 // let emoCont = document.querySelector('.emotion-container')
