@@ -6,14 +6,6 @@ function getEmotionsArray(cats) {
     const emotionsArray = []
     for (let cat of cats) {
         for (let emotion of cat.emotionTags) {
-            /*
-            Challenge:
-            1. Refactor this nested for of so that an
-               emotion is only pushed to emotionsArray
-               if it is not already in emotionsArray.
-               Extra kudos if you use the "logical not"
-               operator - feel free to google it!
-            */
 
             if (!emotionsArray.includes(emotion)) {
                 emotionsArray.push(emotion)
@@ -63,50 +55,18 @@ activeEmotion.parentElement.classList.add('highlight');
 }
 
 
-// let emoCont = document.querySelector('.emotion-container')
-// let radioItems = ''
 
 
-// function write(){
-// for (let anything of catsData){
-//     for (let emo of anything.emotionTags){
+const getImage=document.querySelector('#meme-submit')
 
-//         radioItems +=
-//         `
-//         <div class="emotions">
-//         <label for="${emo}">${emo}</label>
-//         <input
-//         class="emotions"
-//         name="emotions"
-//         type="radio"
-//         id="${emo}"
-//         value=${emo}>
-//         </div>`
-
-// }
-// emoCont.innerHTML = radioItems
-// }
-
-// }
-
-// write()
+getImage.addEventListener('click', getMatchingCatsArray)
 
 
+function getMatchingCatsArray(e){
 
-// emoCont.addEventListener('click', function(e){
-//     console.clear()
-//     let activeEmotion = e.target.id
-//     console.log(activeEmotion)
-// })
+if(document.querySelector('input[type="radio"]:checked')){
+    const selectedEmotion = document.querySelector('input[type="radio"]:checked').value
+    console.log(selectedEmotion)
+}else(console.log('Select an Emotion'))
 
-// // addItemBtn.addEventListener('click', function(){
-
-// //             if(shoppingList.includes(itemInput.value)){
-// //                 console.log('no duplicates')
-// //             }
-// //             else{
-// //                 shoppingList.push(itemInput.value)
-// //                 render()
-// //             }
-// //             itemInput.value = ''
-// //     })
+}
