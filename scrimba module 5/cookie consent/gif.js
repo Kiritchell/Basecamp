@@ -70,3 +70,14 @@ if(document.querySelector('input[type="radio"]:checked')){
 }else(console.log('Select an Emotion'))
 
 }
+
+const isGif = document.querySelector('#gif-checkbox')
+
+getImage.addEventListener('click', function(){
+    if (isGif.checked && document.querySelector('input[type="radio"]:checked') ){
+        console.log('show gif')
+    }
+    else{
+        console.log('pick yo emotion to get gif')
+    }
+})
