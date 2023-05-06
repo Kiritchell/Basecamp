@@ -38,14 +38,15 @@ function renderEmotionsRadios(cats) {
 
 renderEmotionsRadios(catsData)
 
+
+
+
 emoCont.addEventListener('change', highlightCheckedOption)
 
-
-
-
-
 function highlightCheckedOption(e){
+
 let activeEmotion = document.getElementById(e.target.id)
+
 let prevEmotion = document.querySelector(".highlight");
 console.log(activeEmotion)
 if(prevEmotion){
