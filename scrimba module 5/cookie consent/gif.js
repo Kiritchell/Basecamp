@@ -17,6 +17,27 @@ function getEmotionsArray(cats) {
 
 let emoCont = document.querySelector('.emotion-container')
 
+
+function getSingleCatObject(){
+    const catsArray = getMatchingCatsArray()
+
+
+    if (catsArray.length === 1)
+        {return catsArray[0].alt}
+        else{
+            function randomNumber(min, max) {
+                return Math.floor(Math.random() * catsArray.length)
+              }
+              {return catsArray[randomNumber()].alt}
+        }
+}
+
+function renderCat(){
+getSingleCatObject()//temporary
+}
+
+
+
 function renderEmotionsRadios(cats) {
 
     let radioItems = ``
@@ -48,7 +69,7 @@ function highlightCheckedOption(e){
 let activeEmotion = document.getElementById(e.target.id)
 
 let prevEmotion = document.querySelector(".highlight");
-console.log(activeEmotion)
+// console.log(activeEmotion)
 if(prevEmotion){
     prevEmotion.classList.remove('highlight')
 }
@@ -61,49 +82,9 @@ activeEmotion.parentElement.classList.add('highlight');
 const getImage=document.querySelector('#meme-submit')
 const isGif = document.querySelector('#gif-checkbox')
 
-getImage.addEventListener('click', getMatchingCatsArray)
+getImage.addEventListener('click', renderCat)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-Challenge:
-1. Change the .filter() method's function so it returns an
-   array that only has GIFs if the 'GIFs only' option is
-   checked. If the 'GIFs only' option is not checked, it
-   should return an array of all matches as it does now.
-*/
 
 
 

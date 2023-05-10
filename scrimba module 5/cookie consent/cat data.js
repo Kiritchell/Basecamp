@@ -33,7 +33,7 @@ export const catsData = [
         alt: "A cat looking dominant",
     },
     {
-        emotionTags: ["happy", "relaxed"],
+        emotionTags: ["relaxed"],
         isGif: false,
         image: "happy.jpeg",
         alt: "A cat looking happy",
