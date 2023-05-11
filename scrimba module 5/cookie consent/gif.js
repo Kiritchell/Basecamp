@@ -1,6 +1,8 @@
 import { catsData } from './cat data.js'
 
-
+const memeModal = document.getElementById('meme-modal')
+const memeModalInner = document.querySelector('#meme-modal-inner')
+const memeModalClose = document.querySelector('#meme-modal-close-btn')
 
 function getEmotionsArray(cats) {
     const emotionsArray = []
@@ -21,9 +23,8 @@ let emoCont = document.querySelector('.emotion-container')
 function getSingleCatObject(){
     const catsArray = getMatchingCatsArray()
 
-
     if (catsArray.length === 1)
-        {return catsArray[0].alt}
+        {return catsArray[0]}
         else{
             function randomNumber(min, max) {
                 return Math.floor(Math.random() * catsArray.length)
@@ -33,8 +34,22 @@ function getSingleCatObject(){
 }
 
 function renderCat(){
-getSingleCatObject()//temporary
+const catObject = getSingleCatObject()
+
+memeModalInner.innerHTML =
+`<img
+class="cat-img"
+src="./images/${catObject.image}"
+alt="${catObject.alt}"
+>`
+
+memeModal.style.display = "flex"
+
 }
+
+memeModalClose.addEventListener('click', function(){
+    memeModal.style.display = "none"
+})
 
 
 
@@ -94,7 +109,7 @@ function getMatchingCatsArray(e){
 
         const matchingCatEmotion = catsData.filter(function(catSpecial){
             if (isGif.checked){
-                console.log('true')
+                // console.log('true')
                return  catSpecial.emotionTags.includes(selectedEmotion) && catSpecial.isGif
 
             }
