@@ -2,6 +2,7 @@ import { tweetsData } from './TweetsData.js'
 
 import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
 
+
                                    /* Declated Variables  */
 const chirpInput = document.querySelector('#tweet-input')
 const chirpFeed = document.querySelector('#feed')
@@ -28,6 +29,8 @@ document.addEventListener('click', function(e){
 
     render()}
 
+    window.localStorage.setItem("tweetsData", JSON.stringify(tweetsData));
+
     chirpInput.value = '' /* empties text input */
 
     /* end of new */
@@ -45,14 +48,13 @@ document.addEventListener('click', function(e){
     })
 
 
-
-
-
                                   /* Functions */
 
 function getFeedHtml(){
-    let feedHtml = ''
-
+    let feedHtml=''
+    let newObject = window.localStorage.getItem("tweetsData");
+    newObject = JSON.parse(newObject)
+    console.log(newObject[0].handle)
     tweetsData.forEach(function(tweet){
 
 let faRetweetClass = ''
@@ -73,14 +75,22 @@ if(tweet.replies.length>0){
                 <div>
                     <p class="handle">${reply.handle}</p>
                     <p class="tweet-text">${reply.tweetText}</p>
+
                 </div>
+
             </div>
-        </div>`
+
+        </div>
+        `
+
     })
 
 }
 
          feedHtml +=
+
+
+
         ` <div class="tweet">
         <div class="tweet-inner">
             <img src="${tweet.profilePic}" class="profile-pic">
@@ -111,6 +121,7 @@ if(tweet.replies.length>0){
     </div>
     </div>`
 })
+
 return feedHtml
 }
 
