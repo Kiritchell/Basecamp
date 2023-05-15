@@ -1,0 +1,160 @@
+/* Twimba CSS Started May 2023 Kirk Mitchell */
+
+*{
+    transition-duration: 250ms;}
+
+    @font-face {
+    font-family: 'neoclassical';
+    src: url('/neoclassical.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    #main-title{
+    transform:rotate(90deg);
+    color:inherit !important;
+    opacity:.7;
+    position:fixed;
+    right:-30px;
+    bottom:55px;
+    border:none;
+    font-size:20px;
+    font-family: 'neoclassical', serif;
+    }
+
+    html, body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Oswald', sans-serif;
+
+    }
+
+    /* typography and icons */
+
+    h1{
+        color: #e16162;
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+    h4{
+        color: #e16162;
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+    i{
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+
+    /* layout */
+
+    main, header{
+        justify-content: center;
+        text-align: center;
+
+    }
+
+    header{
+        background-color: #004643;
+        height:100px;
+        justify-content: center;
+        padding:20px 10px;
+
+    }
+
+    main{background-color: white;}
+
+
+    /* menu */
+    #menuFeed{width:350px;
+        padding:10px 0px;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .item-card{
+        display:flex;
+        width:100%;
+        margin:15px;
+        border-radius: 20px;
+        height:fit-content;
+        border:1px solid #f9bc60;
+        flex-direction: row;
+        position: relative;
+    }
+
+    .menu-icon{
+        width:20%;
+        display:flex;
+        left:0;
+        padding:10px;
+        z-index: 1;
+        color:#001e1d;
+        align-items: center;
+        justify-content: center;
+    }
+
+    i{
+        font-size:45px;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;}
+
+.itemandprice{
+    flex-direction: column;
+}
+    .menu-item{
+        justify-content: space-between;
+        padding:10px;
+        width: 80%;
+        text-align: left;
+        color:#004643;
+        font-size:20px;
+        font-weight: 800;
+    }
+
+.addBtn{
+    position:absolute;
+    padding:10px;
+    top:0;
+    right:0;
+    font-size:20px;
+}
+
+#orderList{
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+}
+    /* images */
+
+    .profile-pic{
+        border-radius: 50%;
+        width: 48px;
+    }
+
+    /* utility */
+    .hidden{
+        display: none;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    @media (max-width: 768px){
+    .flex-center{flex-direction: column;
+    align-items: center;
+    }
+
+    }
