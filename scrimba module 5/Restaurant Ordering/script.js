@@ -4,6 +4,12 @@ const menuFeed = document.querySelector('#menuFeed')
 const orderList = document.querySelector('#orderList')
 const orderListTitle = document.querySelector('#orderListTitle')
 const modalPopup = document.querySelector('#modalPopup')
+const thanks = document.querySelector('#thanks')
+const orderTotal = document.querySelector('#totalSection')
+let totalPrice = 0
+
+
+
 
 document.addEventListener('click', function(e){
 if(e.target.dataset.add){
@@ -11,6 +17,10 @@ if(e.target.dataset.add){
 }
 if(e.target.id==="buyNowButton"){
     modalPopup.classList.toggle('modalPopupShow')
+}
+if(e.target.id === "orderBtn"){
+    thanksOrder(e)
+
 }
 })
 
@@ -24,43 +34,35 @@ function handleAddClick(menuId){
     let cart = []
 
 
-
-
     if(cart.length<=0){
     orderListTitle.innerHTML=` <h3>Order</h3>`}
 
     cart.push(targetMenuObj)
 
-    let totalPrice = 0
-
-
-
-
+    console.log(cart[0].item)
 
     orderList.innerHTML +=
     `<div id="cart">
     <div class="orderList">
         <span class="listItem">${cart[0].item}</span>
-        <span class="listRemove"><a>Remove</a></span>
         <span class="listItem">$${cart[0].price}.00</span>
         <br>
     </div>
     </div>`
 
 
-
-
-
-        let orderTotal = document.querySelector('#totalSection')
         orderTotal.innerHTML = `<h1>Total = $${totalPrice+=cart[0].price}</h1>
         <button id="buyNowButton">Order</button>`
 
 }
 
+
+
+
 function renderMenu(){
 
 menu.forEach(function(menuItems){
-        // console.log(menuItems.item)
+
 
 menuFeed.innerHTML +=
     `<div class="item-card">
@@ -80,6 +82,15 @@ menuFeed.innerHTML +=
 }
 
 
+function thanksOrder(e){
+    console.log(e.target.id)
+    thanks.innerHTML=` <h3 class="thanksOrder">Thanks for ordering!</h3>`
+    modalPopup.classList.toggle('modalPopupShow')
+    orderList.innerHTML = ''
+    orderListTitle.innerHTML = ''
+    orderTotal.innerHTML = ''
+    totalPrice=0
 
+}
 
 renderMenu()

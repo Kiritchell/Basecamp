@@ -199,7 +199,12 @@ margin-top:20px;}
     display: none;
 }
 
-
+.thanksOrder{
+    background-color:#004643;
+    color:white;
+    font-weight: 500;
+    border-radius: 20px;
+}
 
 
 
