@@ -1,0 +1,129 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #404040;
+    margin:0;
+}
+
+/* =================
+    Typography
+   ================= */
+
+
+h1 {
+    font-size:2.5rem;
+    font-weight: 400;
+    text-shadow: 0px 2px #816fca;
+}
+
+h2{
+    font-size:2.25rem;
+    margin:.167em;
+}
+
+p{
+    font-size:1.125rem;
+    line-height:1.35;
+}
+
+.beta-text,
+.subheading{
+    text-transform:uppercase;
+}
+
+.beta-text {
+    font-weight: 900;
+}
+
+.subheading {
+    color: #575757;
+    font-weight: 900;
+    margin-bottom:.5em;
+}
+
+/* =================
+    Flex containers
+   ================= */
+
+   .intro,
+   .main-content {
+       display: flex;
+       flex-direction: column;
+   }
+
+/* =================
+    Intro
+   ================= */
+
+
+.intro {
+    text-align: center;
+    min-height:250px;
+    justify-content: center;
+    color: #fff;
+    background:#9480e4 url('images/intro-bg.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* ====================
+    Main content
+   ==================== */
+
+
+.main-content{
+    padding:2.5em 2em;
+    align-items: center;
+}
+.img-main{
+    width:120px;
+    border-radius: 50%;
+}
+
+/*
+  Challenge: Apply a full background image
+    - The background image should scale to fill the entire
+      width and height of .intro while preserving its ratio
+*/
+
+/* =================
+    Form
+   ================= */
+
+
+/* =================
+    Media queries
+   ================= */
+/*
+  Challenge: Adjust the layout for wider screens
+    - Add a media query that targets a browser width of 576px or wider
+    - Within the media query, convert the parent element of .intro and
+      .main-content to a flex container
+    - Set the width .intro and .main-content to exactly
+      half the total width of their parent container
+*/
+   @media(min-width:576px){
+    body{
+        display: flex;
+    }
+
+    .intro,
+    .main-content{
+        width:50%;
+        padding:1em;
+        height:100vh;
+        justify-content: center;
+    }
+
+    h1{font-size:5vw;}
+
+    h2{font-size:2.625rem;}
+
+    .beta-text{font-size:1.25rem;}
+   }/*
+  Challenge: Adjust text for wider screens
+    - In the media query, increase the h1 font-size to
+      a rem value equal to 52px
+    - Increase the h2 font-size to a rem value equal to 42px
+    - Increase the font-size of .beta-text to a
+      rem value equal to 20px
+*/
