@@ -15,6 +15,7 @@
         <strong>Scrimba avatar</strong>
       </h1>
       <span class="beta-text">Currently in Beta</span>
+      <p class="top-text">Powered by Scrimba</p>
     </section>
 
     <main class="main-content">
@@ -29,6 +30,21 @@
         The colorful and iconic Scrimba avatars are no longer just for members
         of the Scrimba team and its Avengers-caliber group of code reviewers.
         You can Scrimbafy your photo today!
+      </p>
+
+      <form>
+        <input type="text" required placeholder="Name" aria-label="Name" />
+        <input type="email" required placeholder="Email" aria-label="Email" />
+        <input
+        class="btn"
+          type="file"
+          required
+          accept="image/png, image/jpg"
+          aria-label="Choose file" />
+        <button class="btn btn-primary">Submit</button>
+      </form>
+      <p class="fine-print">
+        We'll never share your information without permission
       </p>
     </main>
     <script src="index.js"></script>

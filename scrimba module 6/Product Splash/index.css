@@ -22,10 +22,18 @@ h2{
     margin:.167em;
 }
 
-p{
+p,
+.top-text{
     font-size:1.125rem;
     line-height:1.35;
 }
+
+.top-text{order:-1;
+    margin-top:-5px;
+    line-height: 10px;
+}
+.beta-text{order:1;}
+
 
 .beta-text,
 .subheading{
@@ -52,6 +60,9 @@ p{
        flex-direction: column;
    }
 
+   .intro{
+    justify-content: space-between;
+   }
 /* =================
     Intro
    ================= */
@@ -77,32 +88,73 @@ p{
     align-items: center;
 }
 .img-main{
+
     width:120px;
     border-radius: 50%;
 }
 
-/*
-  Challenge: Apply a full background image
-    - The background image should scale to fill the entire
-      width and height of .intro while preserving its ratio
-*/
+
 
 /* =================
     Form
    ================= */
 
+   form{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    margin:1em;
+    padding:0;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
 
+input{
+    display: flex;
+    width:80%;
+    padding:.75em;
+    margin:.5em;
+    border-radius: .75em;
+    font-family:inherit;
+   }
+
+input:not(:last-of-type){ border: 2px solid #9480e4;}
+
+input:focus{
+    border:2px solid #8a71ec;
+    background-color: #e6e8ec;
+    outline:none;
+}
+button,
+.btn{
+    padding:.75em;
+    margin:.5em;
+    border-radius: .25em;
+    font-size:1.2em;
+}
+
+button{
+    cursor: pointer;
+    outline:none;
+    border:none;
+    background-color:#9480e4;
+    width:80%;
+    color:white;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+
+}
+button:hover{
+    background-color:white;
+    color:#9480e4;
+    border:2px solid #816fca;
+}
 /* =================
     Media queries
    ================= */
-/*
-  Challenge: Adjust the layout for wider screens
-    - Add a media query that targets a browser width of 576px or wider
-    - Within the media query, convert the parent element of .intro and
-      .main-content to a flex container
-    - Set the width .intro and .main-content to exactly
-      half the total width of their parent container
-*/
+
    @media(min-width:576px){
     body{
         display: flex;
@@ -121,11 +173,9 @@ p{
     h2{font-size:2.625rem;}
 
     .beta-text{font-size:1.25rem;}
-   }/*
-  Challenge: Adjust text for wider screens
-    - In the media query, increase the h1 font-size to
-      a rem value equal to 52px
-    - Increase the h2 font-size to a rem value equal to 42px
-    - Increase the font-size of .beta-text to a
-      rem value equal to 20px
-*/
+
+form,
+p{max-width: 450px;}
+
+button{max-width: 350px;}
+   }
