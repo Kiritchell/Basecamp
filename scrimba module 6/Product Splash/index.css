@@ -1,3 +1,5 @@
+*, *::after, *::before{box-sizing: border-box;}
+
 body {
     font-family: 'Source Sans Pro', sans-serif;
     color: #404040;
@@ -22,16 +24,16 @@ h2{
     margin:.167em;
 }
 
-p,
-.top-text{
-    font-size:1.125rem;
-    line-height:1.35;
+
+.top-text {
+    font-size: 0.875rem;
+    font-weight: 900;
+    padding-top: 0.25em;
+    border-top: 5px solid;
+    order: -1;
+    margin: 0 auto;
 }
 
-.top-text{order:-1;
-    margin-top:-5px;
-    line-height: 10px;
-}
 .beta-text{order:1;}
 
 
@@ -69,6 +71,7 @@ p,
 
 
 .intro {
+
     text-align: center;
     min-height:250px;
     justify-content: center;
