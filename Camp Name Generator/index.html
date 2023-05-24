@@ -37,6 +37,7 @@
   <script>
     // Method to convert the Excel file to JSON
     function convertExcelToJSON() {
+
        var filePath = "/Camp Names.xlsx"; // Replace with the actual file path
 
        // Read the Excel file
@@ -56,7 +57,7 @@
 
            var workbook = XLSX.read(arr.join(""), { type: "binary" });
            var result = {};
-
+           console.log(result)
            workbook.SheetNames.forEach(function (sheetName) {
              var roa = XLSX.utils.sheet_to_row_object_array(
                workbook.Sheets[sheetName]
@@ -85,16 +86,26 @@ function pickName(){
         if (color==='Blue'){
             body.style.backgroundColor='blue'
             SelectedName.style.color="white"
+            excelData[picked].Picked = true
+            console.log(excelData[picked].Picked)
         }
-        if (color==='Red'){
+        else if (color==='Green'){
+            body.style.backgroundColor='green'
+            SelectedName.style.color="white"
+        }
+        else if (color==='Black'){
+            body.style.backgroundColor='black'
+            SelectedName.style.color="white"
+        }
+        else if (color==='Red'){
             body.style.backgroundColor='red'
             SelectedName.style.color="white"
         }
-        if (color==='White'){
+        else if (color==='White'){
             body.style.backgroundColor='white'
             SelectedName.style.color="black"
         }
-        if (color==='Orange'){
+        else if (color==='Orange'){
             body.style.backgroundColor='orange'
             SelectedName.style.color="white"
         }
@@ -116,7 +127,7 @@ pickName()
        xhr.send();
      }
 
-     convertExcelToJSON();
+     convertExcelToJSON()
      </script>
        <script type="module" src="script.js"></script>
 </html>
