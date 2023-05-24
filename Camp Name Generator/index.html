@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--meta tags-->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--icon-->
+    <link rel="icon" type="image" href="" />
+    <!--fonts-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Libre+Barcode+39+Text&display=swap"
+      rel="stylesheet" />
+    <link href="/neoclassical.woff" rel="fonts" />
+    <!--CSS-->
+    <link href="style.css" rel="stylesheet"></link>
+    <title>Site</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.min.js"></script>
+  </head>
+   <!--Site Begins-->
+  <body>
+    <header>
+    </header>
+    <main>
+<h1 id="SelectedName"></h1>
+
+    </main>
+
+    <footer>
+    </footer>
+  </body>
+  <!--scripts-->
+
+  <script>
+    // Method to convert the Excel file to JSON
+    function convertExcelToJSON() {
+       var filePath = "/Camp Names.xlsx"; // Replace with the actual file path
+
+       // Read the Excel file
+       var xhr = new XMLHttpRequest();
+       xhr.open("GET", filePath, true);
+       xhr.responseType = "arraybuffer";
+
+       xhr.onload = function (e) {
+         if (xhr.status === 200) {
+           var arraybuffer = xhr.response;
+           var data = new Uint8Array(arraybuffer);
+           var arr = new Array();
+
+           for (var i = 0; i !== data.length; ++i) {
+             arr[i] = String.fromCharCode(data[i]);
+           }
+
+           var workbook = XLSX.read(arr.join(""), { type: "binary" });
+           var result = {};
+
+           workbook.SheetNames.forEach(function (sheetName) {
+             var roa = XLSX.utils.sheet_to_row_object_array(
+               workbook.Sheets[sheetName]
+             );
+             if (roa.length > 0) {
+               result[sheetName] = roa;
+             }
+           });
+
+           // Display the JSON result
+           let excelData =result.Sheet1
+
+           let picked = Math.floor(Math.random()*(excelData.length-1))
+
+
+
+const body = document.querySelector('body')
+const SelectedName =  document.querySelector('#SelectedName')
+
+function pickName(){
+    let picked = Math.floor(Math.random()*(excelData.length-1))
+
+    console.log(excelData[picked].First+excelData[picked].Last)
+    let color = excelData[picked].Color
+   console.log(excelData[picked].Color)
+        if (color==='Blue'){
+            body.style.backgroundColor='blue'
+            SelectedName.style.color="white"
+        }
+        if (color==='Red'){
+            body.style.backgroundColor='red'
+            SelectedName.style.color="white"
+        }
+        if (color==='White'){
+            body.style.backgroundColor='white'
+            SelectedName.style.color="black"
+        }
+        if (color==='Orange'){
+            body.style.backgroundColor='orange'
+            SelectedName.style.color="white"
+        }
+    SelectedName.innerHTML = excelData[picked].First + ' ' + excelData[picked].Last
+    //  return Math.floor(Math.random() * (max - min) + min)
+}
+pickName()
+
+           // console.log(result.Sheet1[0])
+           // console.log(result.Sheet1[0].First)
+           // console.log(result.Sheet1[0].Last)
+           // console.log(result.Sheet1[0].Color)
+           var resultEle = document.getElementById("json-result");
+         } else {
+           console.error("Failed to load the Excel file.");
+         }
+       };
+
+       xhr.send();
+     }
+
+     convertExcelToJSON();
+     </script>
+       <script type="module" src="script.js"></script>
+</html>

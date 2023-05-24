@@ -1,0 +1,21 @@
+*, *::after, *::before{
+  box-sizing: border-box;
+  transition-duration: 250ms;}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color:#f8edeb;
+  color:#6d6875;
+  font-family: 'Montserrat', serif;
+  text-shadow:2px 2px 1px #b5838d;
+  }
+
+  #SelectedName{
+    text-align: center;
+    color:white;
+    font-size:3em;
+    margin-top:60px;
+
+  }
+
