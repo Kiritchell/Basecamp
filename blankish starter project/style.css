@@ -107,7 +107,7 @@ body {
 
 @media (min-width:600px){
   .card{
-    grid-template: 1em auto auto 150px 1em / 200px 1em auto auto 1em;  }
+    grid-template: 1em auto auto minmax(75px, 150px) 1em / 200px 1em auto auto 1em;  }
   .card-img{
     grid-row:1/-1;
     grid-column:1/2;
