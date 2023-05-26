@@ -12,19 +12,23 @@
 body {
   margin: 0;
   padding: 0;
-  background-color:#f8edeb;
-  color:#6d6875;
+  background-color:#f9f4ef;
+  color:#020826;
   font-family: 'Montserrat', serif;
-  text-shadow:2px 2px 1px #b5838d;
   }
 
 .main-title{
   transform:rotate(90deg);
-  opacity:.7;
+  opacity:.2;
   position:absolute;
   right:-45px;
   bottom:55px;
   font-size:1.5em;
   font-family: 'neoclassical', serif;
-  text-shadow:2.5px 2.5px 1px #b5838d;
+  }
+
+
+  /*468px and below phone*/
+  @media (min-width:469px){
+
   }
