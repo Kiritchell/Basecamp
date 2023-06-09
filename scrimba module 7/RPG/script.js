@@ -1,42 +1,47 @@
-let wizard = {
-    id:'hero',
-    name:'Gandalf',
-    avatar:'gandalf.webp',
-    health:60,
-    dice:6,
+const hero = {
+    elementId: "hero",
+    name: "Gandalf",
+    avatar: "gandalf.webp",
+    health: 60,
+    diceRoll: [3,1,4],
+    diceCount: 3
 }
 
-let monster = {
-    id:'monster',
-    name:'Balrog',
-    avatar:'balrog.webp',
-    health:10,
-    dice:4,
+const monster = {
+    elementId: "monster",
+    name: "Balrog",
+    avatar: "balrog.webP",
+    health: 10,
+    diceRoll: [2],
+    diceCount: 1
+}
+
+function renderCharacter(data) {
+    const {elementId, name, avatar, health, diceRoll, diceCount } = data;
+let diceHTML = ' '
+
+for (let i=0;i<diceCount;i++){
+    diceHTML +=  `<div class="dice">${diceRoll[i]}</div>`
 }
 
 
-let heroCard =`<div id="${wizard.id}">
-    <div class="character-card">
-          <h4 class="name">${wizard.name}</h4>
-          <img class="avatar" src="${wizard.avatar}" />
-          <p class="health">health: <b> ${wizard.health} </b></p>
-          <div class="dice-container"><div class="dice">${wizard.dice}</div></div>
-    </div>
-</div>`
-
-let monsterCard =`<div id="${monster.id}">
-<div class="character-card">
-    <h4 class="name">${monster.name}</h4>
-    <img class="avatar" src="${monster.avatar}" />
-    <p class="health">health: <b> ${monster.health} </b></p>
-    <div class="dice-container"><div class="dice">${monster.dice}</div></div>
-</div>
-</div>
-`
-
-
-function render(){
-
-    document.getElementById('main-board').innerHTML=heroCard+monsterCard
+    document.getElementById(elementId).innerHTML =
+        `<div class="character-card">
+            <h4 class="name"> ${name} </h4>
+            <img class="avatar" src="${avatar}" />
+            <div class="health">health: <b> ${health} </b></div>
+            <div class="dice-container">
+                ${diceHTML}
+            </div>
+        </div>`
 }
-render()
+
+// CHALLENGE
+// Update this for loop so it uses a value from the
+// new diceRoll array to render out the dice so the
+// wizard's dice have values of 3, 1 and 4, and the
+// orc's single dice has a value of 2.
+
+
+renderCharacter(hero);
+renderCharacter(monster);
