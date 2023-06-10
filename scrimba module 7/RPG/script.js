@@ -16,14 +16,12 @@ const monster = {
     diceCount: 1
 }
 
+
 function renderCharacter(data) {
-    const {elementId, name, avatar, health, diceRoll, diceCount } = data;
-let diceHTML = ' '
-
-for (let i=0;i<diceCount;i++){
-    diceHTML +=  `<div class="dice">${diceRoll[i]}</div>`
-}
-
+    const { elementId, name, avatar, health, diceRoll, diceCount } = data;
+    const diceHtml = diceRoll.map(function(num){
+        return `<div class="dice">${num}</div>`
+    })
 
     document.getElementById(elementId).innerHTML =
         `<div class="character-card">
@@ -31,17 +29,10 @@ for (let i=0;i<diceCount;i++){
             <img class="avatar" src="${avatar}" />
             <div class="health">health: <b> ${health} </b></div>
             <div class="dice-container">
-                ${diceHTML}
+                ${diceHtml.join('')}
             </div>
         </div>`
 }
-
-// CHALLENGE
-// Update this for loop so it uses a value from the
-// new diceRoll array to render out the dice so the
-// wizard's dice have values of 3, 1 and 4, and the
-// orc's single dice has a value of 2.
-
 
 renderCharacter(hero);
 renderCharacter(monster);
