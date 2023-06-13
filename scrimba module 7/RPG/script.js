@@ -61,3 +61,5 @@ function renderCharacter(data) {
 
 renderCharacter(hero);
 renderCharacter(monster);
+
+console.log(monster)
