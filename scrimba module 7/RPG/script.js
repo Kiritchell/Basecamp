@@ -1,27 +1,52 @@
+function getDiceRollArray(diceCount) {
+    let newDiceRolls = [];
+    for (let i = 0; i < diceCount; i++) {
+        newDiceRolls.push(Math.floor(Math.random() * 6) + 1);
+    }
+    return newDiceRolls;
+}
+
+/*
+Challenge
+1. Create a function called getDiceHtml.
+2. getDiceHtml should map over the array of dice rolls
+   returned from getDiceRollArray to generate the html
+   we need to render our dice with random values. This is
+   the HTML: `<div class="dice">DICE VALUE HERE</div>`
+3. Think about the parameters and arguments!
+4. Down in renderCharacter(), set diceHtml equals to our
+   new getDiceHtml function. Remember to give it the argument
+   it needs.
+5. Delete any code we no longer need.
+**hint.md for help**
+*/
+
+function getDiceHtml(diceCount){
+    return getDiceRollArray(diceCount).map(function(num){
+        return `<div class="dice">${num}</div>`
+    }).join('')
+}
+
+
 const hero = {
     elementId: "hero",
-    name: "Gandalf",
-    avatar: "gandalf.webp",
+    name: "Wizard",
+    avatar: "images/wizard.png",
     health: 60,
-    diceRoll: [3,1,4],
     diceCount: 3
 }
 
 const monster = {
     elementId: "monster",
-    name: "Balrog",
-    avatar: "balrog.webP",
+    name: "Orc",
+    avatar: "images/orc.png",
     health: 10,
-    diceRoll: [2],
     diceCount: 1
 }
 
-
 function renderCharacter(data) {
-    const { elementId, name, avatar, health, diceRoll, diceCount } = data;
-    const diceHtml = diceRoll.map(function(num){
-        return `<div class="dice">${num}</div>`
-    })
+    const { elementId, name, avatar, health, diceCount } = data;
+    const diceHtml = getDiceHtml(diceCount)
 
     document.getElementById(elementId).innerHTML =
         `<div class="character-card">
@@ -29,9 +54,9 @@ function renderCharacter(data) {
             <img class="avatar" src="${avatar}" />
             <div class="health">health: <b> ${health} </b></div>
             <div class="dice-container">
-                ${diceHtml.join('')}
+                ${diceHtml}
             </div>
-        </div>`
+        </div>`;
 }
 
 renderCharacter(hero);
