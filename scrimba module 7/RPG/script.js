@@ -63,3 +63,44 @@ renderCharacter(hero);
 renderCharacter(monster);
 
 console.log(monster)
+
+
+const hotel1 = {
+	name: 'Safari View',
+	rooms: 30,
+	stars: '⭐⭐⭐⭐⭐',
+	costPerNightAdult: 240,
+	costPerNightChild: 180,
+}
+
+const hotel2 = {
+	name: 'Leopard Mansion',
+	rooms: 96,
+	stars: '⭐⭐⭐',
+	costPerNightAdult: 120,
+	costPerNightChild: 180,
+}
+
+
+function NationalParkHotels(data){
+    this.name = data.name
+    this.rooms = data.rooms
+    this.stars = data.stars
+    this.costPerNightAdult = data.costPerNightAdult
+    this.costPerNightChild = data.costPerNightChild
+
+	function sum(num1,num2){
+        return data.costPerNightAdult*num1 + data.costPerNightAdult*num2}
+	console.log()
+
+	this.summarizeHotel = function(){
+		console.log(`A one night stay at the ${this.name} for 2 adults and 2 children is $${sum(2,2)} Dollars`)
+	}
+}
+
+
+const hotela = new NationalParkHotels(hotel1)
+const hotelab = new NationalParkHotels(hotel2)
+
+hotela.summarizeHotel()
+hotelab.summarizeHotel()
